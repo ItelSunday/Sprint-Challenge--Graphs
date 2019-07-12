@@ -29,17 +29,22 @@ player = Player("Name", world.startingRoom)
 # FILL THIS IN
 traversalPath = []
 
-#identify room visited
-currentPath = {}
-
-#backtrack 
+#Identify room visited, backtrack, reverse direction
+currentPath = {} 
 backTrack = []
-
-#reverse direction
 direction_opposite = {'n':'s', 's':'n', 'e':'w', 'w':'e'}
 
-#Start room then an exit to 'current roon'
+#Start room then an exit to 'current rooms'
 currentPath[player.currentRoom.id] = player.currentRoom.Exit()
+#Hint hint
+#Compare room traverse through all the rooms
+#Check if room is visited and if current room is in the path
+#Reverse path that has been explored
+#Remove direction from last explored
+#Direction is explored
+#If there is a room that has not been visited
+
+
 
 # class Stack:
 #     def __init__(self):
