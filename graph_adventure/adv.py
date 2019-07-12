@@ -17,26 +17,44 @@ roomGraph={494: [(1, 8), {'e': 457}], 492: [(1, 20), {'e': 400}], 493: [(2, 5), 
 
 world.loadGraph(roomGraph)
 world.printRooms()
+
+#zerooooo
 player = Player("Name", world.startingRoom)
 
+#500 room in the roomGraph
+#Backtrack to the nearest room with an unexplored exit = shortest path = BFS
+
+#Current room, travel and know direction, it will start loop = DFT ??
 
 # FILL THIS IN
 traversalPath = []
 
-class Stack:
-    def __init__(self):
-      self.stack = []
-    def push(self, value):
-        self.stack.append(value)
-    def pop(self):
-        if self.size() > 0:
-            return self.stack.pop()
-        else:
-            return None
-    def size(self):
-        return len(self.stack)
+#identify room visited
+currentPath = {}
+
+#backtrack 
+backTrack = []
+
+#reverse direction
+direction_opposite = {'n':'s', 's':'n', 'e':'w', 'w':'e'}
+
+#Start room then an exit to 'current roon'
+currentPath[player.currentRoom.id] = player.currentRoom.Exit()
+
+# class Stack:
+#     def __init__(self):
+#       self.stack = []
+#     def push(self, value):
+#         self.stack.append(value)
+#     def pop(self):
+#         if self.size() > 0:
+#             return self.stack.pop()
+#         else:
+#             return None
+#     def size(self):
+#         return len(self.stack)
     
-stack = Stack()
+# stack = Stack()
 
 
 # TRAVERSAL TEST
